@@ -379,6 +379,7 @@ GameObject:
   - component: {fileID: 30785146}
   - component: {fileID: 30785145}
   - component: {fileID: 30785144}
+  - component: {fileID: 30785147}
   m_Layer: 0
   m_Name: checker red
   m_TagString: Untagged
@@ -453,6 +454,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 30785142}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &30785147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 30785142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91154d885882945da95867cf6ea41aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hazard: {fileID: 0}
+  Playerpiece: {fileID: 0}
 --- !u!1 &38852548
 GameObject:
   m_ObjectHideFlags: 0
@@ -19392,6 +19406,7 @@ GameObject:
   - component: {fileID: 1299502036}
   - component: {fileID: 1299502035}
   - component: {fileID: 1299502034}
+  - component: {fileID: 1299502037}
   m_Layer: 0
   m_Name: checker red (9)
   m_TagString: Untagged
@@ -19466,6 +19481,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1299502032}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1299502037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1299502032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91154d885882945da95867cf6ea41aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hazard: {fileID: 2016517219}
+  Playerpiece: {fileID: 1299502033}
 --- !u!1 &1303668842
 GameObject:
   m_ObjectHideFlags: 0
@@ -27097,6 +27125,7 @@ GameObject:
   - component: {fileID: 1722651501}
   - component: {fileID: 1722651500}
   - component: {fileID: 1722651499}
+  - component: {fileID: 1722651502}
   m_Layer: 0
   m_Name: checker black (8)
   m_TagString: Untagged
@@ -27171,6 +27200,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1722651497}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1722651502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722651497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91154d885882945da95867cf6ea41aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hazard: {fileID: 0}
+  Playerpiece: {fileID: 963194228}
 --- !u!1 &1723986500
 GameObject:
   m_ObjectHideFlags: 0
@@ -32381,7 +32423,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2016517218}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000006407499}
-  m_LocalPosition: {x: 2.0000005, y: 0.542, z: 6.0000014}
+  m_LocalPosition: {x: 2.0000005, y: 0.542, z: 4}
   m_LocalScale: {x: 1, y: 0.12450734, z: 1}
   m_Children: []
   m_Father: {fileID: 1540212244}
