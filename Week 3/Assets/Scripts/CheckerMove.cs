@@ -6,7 +6,12 @@ public class CheckerMove : MonoBehaviour
 {
 
     public Transform Hazard;
+    public Transform Reverse;
+    public Transform Ice;
+    public Transform Gravity;
+    public Transform Win;
     public Transform Playerpiece;
+    public Transform Death;
     Vector3 Pos1 = new Vector3(1f,0f,1f);    //movement for upright
     Vector3 Pos2 = new Vector3(1f,0f,-1f);   //movement for bottom right
     //Vector3 Pos3 = new Vector3(-1f, 0f, 1f);  //movement for up left
@@ -48,9 +53,26 @@ public class CheckerMove : MonoBehaviour
         { Playerpiece.position += new Vector3(tileset, 0f, 0f); }
 
         if (Playerpiece.position == Hazard.position)
-        { Destroy(Hazard.gameObject);       //to destroy the game object.
+        {
+            //Destroy(Hazard.gameObject);       //to destroy the game object.
             Playerpiece.position += new Vector3(0f, 0f, tileset);     // this line shall move the checker piece over after eating the other checker piece
-        }        
+        }
 
+        if (Playerpiece.position == Reverse.position)
+        {
+            Playerpiece.position += new Vector3(0f, 0f, -tileset);
+        }
+        if (Playerpiece.position == Ice.position)
+        {
+            Playerpiece.position = new Vector3(2f, 2f, 1f);
+        }
+        if (Playerpiece.position == Gravity.position)
+        {
+            Playerpiece.position = new Vector3(2f, 1f, 5f);
+        }
+        if(Playerpiece.position == Win.position)
+        {
+           Playerpiece.position = new Vector3(8f, 1f, 2f);
+        }
     }
 }
