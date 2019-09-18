@@ -20,7 +20,8 @@ public class deathtest : MonoBehaviour
 
         if (Playerpiece.position == Death.position)
         {
-            Destroy(Playerpiece.gameObject);
+            //Destroy(Playerpiece.gameObject);
+            Playerpiece.position = new Vector3(2f, 1f, -1f);
         }
     }
 }

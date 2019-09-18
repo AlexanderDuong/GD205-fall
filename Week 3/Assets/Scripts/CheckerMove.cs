@@ -12,8 +12,10 @@ public class CheckerMove : MonoBehaviour
     public Transform Win;
     public Transform Playerpiece;
     public Transform Death;
+    public Transform obstacle;
+    public TextMesh TextWin;
     Vector3 Pos1 = new Vector3(1f,0f,1f);    //movement for upright
-    Vector3 Pos2 = new Vector3(1f,0f,-1f);   //movement for bottom right
+     Vector3 Pos2 = new Vector3(1f,0f,-1f);   //movement for bottom right
     //Vector3 Pos3 = new Vector3(-1f, 0f, 1f);  //movement for up left
     //Vector3 Pos4 = new Vector3(-1f, 0f, -1f);   //movement for bottom right
     Vector3 pos5 = new Vector3(0f, 0f, 1f);     //movement for forward
@@ -28,7 +30,7 @@ public class CheckerMove : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-
+        Vector3 newPos = Playerpiece.position;  //new movement command that helps with movement see lines 48 + for better explaination.
         //Playerpiece.position += Pos1;     //adds this by the ammout of the Pos1 position += <-
         //if (Input.GetKeyDown("w"))              // moves upright
         //{ Playerpiece.position += Pos1; }
@@ -44,13 +46,17 @@ public class CheckerMove : MonoBehaviour
         //{ Playerpiece.position += pos6; }       //moves down
 
         if (Input.GetKeyDown("w"))
-        { Playerpiece.position += new Vector3(0f, 0f, tileset); }
+        { newPos += new Vector3(0f, 0f, tileset); }
         if (Input.GetKeyDown("s"))
-        { Playerpiece.position += new Vector3(0f, 0f, -tileset); }
+        { newPos += new Vector3(0f, 0f, -tileset); }
         if (Input.GetKeyDown("a"))
-        { Playerpiece.position += new Vector3(-tileset, 0f, 0f); }
+        { newPos += new Vector3(-tileset, 0f, 0f); }
         if (Input.GetKeyDown("d"))
-        { Playerpiece.position += new Vector3(tileset, 0f, 0f); }
+        { newPos += new Vector3(tileset, 0f, 0f); }
+        if (obstacle.position != newPos)      //because of the code on 33 helps remove need to block movement for all directions
+        {
+            Playerpiece.position = newPos;
+        }
 
         if (Playerpiece.position == Hazard.position)
         {
@@ -72,6 +78,7 @@ public class CheckerMove : MonoBehaviour
         }
         if(Playerpiece.position == Win.position)
         {
+           TextWin.text = "You WIN";
            Playerpiece.position = new Vector3(8f, 1f, 2f);
         }
     }
