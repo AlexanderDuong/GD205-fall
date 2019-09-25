@@ -7,7 +7,8 @@ public class Key : MonoBehaviour
     public Transform key;
     public Transform PlayerPiece;
     public Transform Door;
-    
+    public TextMesh TextWin;
+    bool haskey = false;
 
 
     // Start is called before the first frame update
@@ -21,8 +22,10 @@ public class Key : MonoBehaviour
     {
         if (PlayerPiece.position == key.position)
         {
-            key.position = new Vector3(20f, 20f, 20f);
-            Door.position = new Vector3(20f, 20f, 20f);
+            haskey = true;
+            key.gameObject.SetActive(false);
+            Door.gameObject.SetActive(false); //instead of using or hiding it you can deactivate it like this
+            TextWin.text = "key obtained";
         }
     }
 }

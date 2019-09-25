@@ -14,7 +14,8 @@ public class CheckerMove : MonoBehaviour
     public Transform Playerpiece;
     //public Transform Death; (in a different script file)
     public Transform obstacle;
-    public Transform Hazard;    public TextMesh TextWin;
+    public Transform Hazard;
+    public TextMesh TextWin;
     float tileset = 1f;         // 30+ to figure out movement
 
 
@@ -26,7 +27,7 @@ public class CheckerMove : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
         Vector3 newPos = Playerpiece.position;  //new movement command that helps with movement see lines 48 + for better explaination.
-
+        
         if (Input.GetKeyDown("w"))
         { newPos += new Vector3(0f, 0f, tileset);
             sauce.PlayOneShot(Move, 0.2f);
