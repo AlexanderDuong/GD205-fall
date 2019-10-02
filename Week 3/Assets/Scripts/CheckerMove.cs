@@ -7,6 +7,8 @@ public class CheckerMove : MonoBehaviour
     public AudioClip Move;
     public AudioSource sauce;
 
+    GameObject[] objectTagArray;
+    public string tagname;
     public Transform Reverse;
     public Transform Ice;
     public Transform Gravity;
@@ -15,12 +17,16 @@ public class CheckerMove : MonoBehaviour
     //public Transform Death; (in a different script file)
     public Transform obstacle;
     public Transform Hazard;
+    public Transform key;
+    public Transform Door;
+    bool haskey = false;
     public TextMesh TextWin;
     float tileset = 1f;         // 30+ to figure out movement
 
 
 	// Use this for initialization
 	void Start () {
+        objectTagArray = GameObject.FindGameObjectsWithTag(tagname);
         sauce = GetComponent<AudioSource>();
     }
 	
@@ -46,8 +52,14 @@ public class CheckerMove : MonoBehaviour
         }
 
 
-
-        if (obstacle.position != newPos)      //because of the code on 33 helps remove need to block movement for all directions
+        if (Playerpiece.position == key.position)
+        {
+            haskey = true;
+            key.gameObject.SetActive(false);
+            Door.gameObject.SetActive(false); //instead of using or hiding it you can deactivate it like this
+            TextWin.text = "key obtained";
+            if (obstacle.position != newPos) ;      //because of the code on 33 helps remove need to block movement for all directions
+                }
         {
             Playerpiece.position = newPos;
         }

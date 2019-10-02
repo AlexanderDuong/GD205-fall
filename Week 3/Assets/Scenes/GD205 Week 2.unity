@@ -4162,7 +4162,7 @@ GameObject:
   - component: {fileID: 498640655}
   m_Layer: 0
   m_Name: Sea (11)
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6193,7 +6193,7 @@ GameObject:
   - component: {fileID: 707908788}
   m_Layer: 0
   m_Name: Sea (12)
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6791,7 +6791,7 @@ GameObject:
   - component: {fileID: 741203896}
   m_Layer: 0
   m_Name: Sea (38)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7090,7 +7090,7 @@ GameObject:
   - component: {fileID: 742502549}
   m_Layer: 0
   m_Name: Sea (35)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8355,7 +8355,7 @@ GameObject:
   - component: {fileID: 888090408}
   m_Layer: 0
   m_Name: Sea
-  m_TagString: Death
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10746,7 +10746,7 @@ GameObject:
   - component: {fileID: 1034894727}
   m_Layer: 0
   m_Name: Sea (36)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11748,7 +11748,7 @@ GameObject:
   - component: {fileID: 1159384430}
   m_Layer: 0
   m_Name: Sea (13)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13974,12 +13974,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Move: {fileID: 8300000, guid: 30a7db91ddff9456c8ed2682c3b4257c, type: 3}
   sauce: {fileID: 0}
+  tagname: death
   Reverse: {fileID: 139381551}
   Ice: {fileID: 61683041}
   Gravity: {fileID: 583705638}
   Playerpiece: {fileID: 1299502033}
   obstacle: {fileID: 1457528281}
   Hazard: {fileID: 2016517219}
+  key: {fileID: 1526556318}
+  Door: {fileID: 1457528281}
   TextWin: {fileID: 694470370}
 --- !u!82 &1299502038
 AudioSource:
@@ -14461,7 +14464,7 @@ GameObject:
   - component: {fileID: 1410289671}
   m_Layer: 0
   m_Name: Sea (37)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15537,7 +15540,7 @@ GameObject:
   - component: {fileID: 1511217904}
   m_Layer: 0
   m_Name: Sea (9)
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15924,7 +15927,6 @@ GameObject:
   - component: {fileID: 1526556317}
   - component: {fileID: 1526556316}
   - component: {fileID: 1526556315}
-  - component: {fileID: 1526556313}
   m_Layer: 0
   m_Name: Key
   m_TagString: Wall
@@ -15932,22 +15934,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1526556313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526556312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b7a4dec9520e646b609f1bfd05873f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: {fileID: 1526556318}
-  PlayerPiece: {fileID: 1299502033}
-  Door: {fileID: 1457528281}
-  TextWin: {fileID: 694470370}
 --- !u!135 &1526556315
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17237,7 +17223,7 @@ GameObject:
   - component: {fileID: 1578911705}
   m_Layer: 0
   m_Name: Sea (10)
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17922,7 +17908,7 @@ GameObject:
   - component: {fileID: 1682074889}
   m_Layer: 0
   m_Name: Sea (7)
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21743,7 +21729,7 @@ GameObject:
   - component: {fileID: 2138854610}
   m_Layer: 0
   m_Name: Sea (8)
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
