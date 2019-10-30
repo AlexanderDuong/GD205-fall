@@ -11,6 +11,25 @@ public class Playermove : MonoBehaviour
     void Update()
     {
         PlayerMovement();
+
+        if (Input.GetMouseButton(0))
+        {
+
+            Ray laser = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            RaycastHit hit = new RaycastHit();
+
+            if (Physics.Raycast(laser, out hit, 10000f))
+            {
+                Debug.Log("you hit" + hit.transform.gameObject.name + " with the ray");
+
+                if (hit.rigidbody)
+                {
+                    Vector3 whichDirection = Random.insideUnitSphere;
+                    hit.rigidbody.AddForce(whichDirection * 100f);
+                }
+            }
+        }
     }
 
     void PlayerMovement()
