@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class MenuScript
+public class MenuScript 
 {
-
     [MenuItem("Tools/Assign Tile Material")]
     public static void AssignTileMaterial()
     {
@@ -19,7 +18,7 @@ public class MenuScript
     }
 
     [MenuItem("Tools/Assign Tile Script")]
-    public static void ASsignTileScript()
+    public static void AssignTileScript()
     {
         GameObject[] tiles = GameObject.FindGameObjectsWithTag("Tile");
 
@@ -28,5 +27,4 @@ public class MenuScript
             t.AddComponent<Tile>();
         }
     }
-
 }
